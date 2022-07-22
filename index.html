@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Финансы</title>
+
+    <link rel="stylesheet" href="resources/styles/reset.css">
+    <link rel="stylesheet" href="resources/styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="resources/scripts/revenueChart.js" defer></script>
+    <script src="resources/scripts/expenses.js" defer></script>
+</head>
+<body>
+    <aside>
+
+    </aside>
+
+    <main>
+        <div id="content">
+            <div class="header">
+                <h2>Dashboard</h2>
+            </div>
+            <div class="balance">
+              
+            </div>
+            <div class="box-2"></div>
+            <div class="box-3"></div>
+            <div class="box-4"></div>
+            <div class="box-5"></div>
+            <div class="revenue">
+                <h3 class="chart-header">Доходы</h3>
+                <div class="chart-container">
+                    <canvas id="revenue"></canvas>
+                </div>
+            </div>
+            <div class="box-7"></div>
+            <div class="box-8"></div>
+            <div class="expenses">
+              <h3 class="chart-header">Расходы</h3>
+              <div class="chart-container">
+                <canvas id="expenses"></canvas>
+            </div>
+            </div>
+            <div class="box-10"></div>
+        </div>
+    </main>
+</body>
+</html>
