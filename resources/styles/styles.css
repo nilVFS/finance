@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+
+/* ОБЩЕЕ */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -11,18 +14,38 @@
 
 body {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     font-size: 16px;
     background: var(--nightBlue);
     display: flex;
+    font-family: "Oswald", Helvetica, sans-serif;
     color: aliceblue;
 }
 
+.gradient-font {
+    background: -webkit-linear-gradient(90deg, var(--blue), var(--pink));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pink {
+    color: var(--pink);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+
+/* БОКОВАЯ НАВИГАЦИЯ */
 aside {
     width: 17%;
     height: 100%;
     background-color: var(--darkBlue);
 }
+
+/* ОСНОВНОЙ БЛОК */
 
 main {
     width: 100%;
@@ -36,14 +59,15 @@ main {
     width: 96%;
     height: 94%;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, minmax(70px, 1fr));
     grid-template-rows: repeat(12, 1fr);
     gap: 1.25rem;
 }
 
+/* ЗАГОЛОВОК, УВЕДОМЛЕНИЯ */
+
 .header {
-    grid-column: 1 / 13;
-    grid-row: 1 / 2;
+    grid-area: 1 / 1 / 2 / 13;
     border-radius: 1rem;
     display: flex;
     justify-content: space-between;
@@ -58,26 +82,15 @@ h2 {
     -webkit-text-fill-color: transparent;
 }
 
+/* БАЛАНС */
+
 .balance {
-    grid-column: 1 / 4;
-    grid-row: 2 / 5;
+    grid-area: 2 / 1 / 5 / 4;
     background-color: var(--darkBlue);
     border-radius: 1rem;
 }
 
-.saved {
-    grid-column: 4 / 7;
-    grid-row: 2 / 5;
-    background-color: var(--darkBlue);
-    border-radius: 1rem;
-}
-
-.bills {
-    grid-column: 7 / 10;
-    grid-row: 2 / 5;
-    background-color: var(--darkBlue);
-    border-radius: 1rem;
-}
+/* Общее для первой строки блоков */
 
 .value {
     display: grid;
@@ -87,7 +100,7 @@ h2 {
 }
 
 .value-header {
-    grid-column: 2 / 5;
+    grid-column: 2 / 12;
     grid-row: 3 / 4;
     font-size: 1.2em;
 }
@@ -101,10 +114,18 @@ h2 {
     font-size: 1.55em;
 }
 
-.stocks-icon {
+.stocks-icon-up {
     height: 50px;
     width: 46px;
     fill: var(--blue);
+    grid-column: 10 / 12;
+    grid-row: 4 / 7;
+}
+
+.stocks-icon-down {
+    height: 50px;
+    width: 46px;
+    fill: var(--pink);
     grid-column: 10 / 12;
     grid-row: 4 / 7;
 }
@@ -113,10 +134,6 @@ h2 {
     font-size: 0.8em;
     grid-column: 2 / 9;
     grid-row: 7 / 8;
-    background: -webkit-linear-gradient(90deg, var(--blue), var(--pink));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .val-hr {
@@ -135,28 +152,171 @@ h2 {
 
 .cash-diff {
     grid-row: 9 / 12;
-    grid-column: 2 / 8;
+    grid-column: 2 / 12;
     font-size: 0.9em;
     align-self: start;
 }
 
-.box-4 {
+
+/* Сэкономлено */
+
+.saved {
+    grid-column: 4 / 7;
+    grid-row: 2 / 5;
+    background-color: var(--darkBlue);
+    border-radius: 1rem;
+}
+
+/* КРЕДИТ */
+
+.loan {
+    grid-column: 7 / 10;
+    grid-row: 2 / 5;
+    background-color: var(--darkBlue);
+    border-radius: 1rem;
+}
+
+/* АККАУНТ */
+
+.account {
     grid-column: 10 / 13;
     grid-row: 2 / 6;
     background-color: var(--darkBlue);
     border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.box-5 {
-    grid-column: 1 / 4;
-    grid-row: 5 / 9;
+.account-wrapper {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 2fr repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.profile-image {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    width: 75px;
+    height: 75px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(45deg, #E065FFAA 20%, var(--blue) 30%, transparent 60%, #E065FFAA);
+}
+
+.profile-image > img {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    top: -50%;
+    left: -15%;
+    object-fit: cover;
+}
+
+.profile-username {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.profile-greeting {
+    grid-area: 3 / 2 / 4 / 3;
+    font-size: 0.9em;
+}
+
+.profile-date {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+
+/* МЕСЯЧНЫЙ ПЛАН РАСХОДОВ */
+
+.spending-plan {
+    grid-area: 5 / 1 / 9 / 4;
     background-color: var(--darkBlue);
     border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
 }
 
+.spending-header {
+    grid-area: 2 / 2 / 4 / 12;
+    font-size: 1.2em;
+}
+
+
+.progress-circle {
+    position: relative;
+    grid-area: 3 / 2 / 7 / 5;
+    margin-left: -16%;
+    margin-top: 0.6em;
+    width: 75px;
+    height: 75px;
+}
+
+.circle {
+    z-index: 2;
+    stroke-dasharray: 220; /* 2 x PI x r == 2 * 3,1415 * 35  */
+    stroke-dashoffset: 46;
+    transform: rotate(-90deg);
+    stroke-linecap: round;
+}
+
+.number {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+}
+
+.bg-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    stroke-dasharray: 220; /* 2 x PI x r == 2 * 3,1415 * 35  */
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg);
+    stroke-linecap: round;
+    stroke: #7665FF
+}
+
+.spending-left {
+    grid-area:  5 / 7 / 6 / 12;
+}
+
+.spending-days-left {
+    grid-area: 6 / 7 / 8 / 12;
+    align-self: center;
+}
+
+.spending-hr {
+    grid-area:  9 / 2 / 9 / 12;
+    width: 100%;
+    opacity: 0.2;
+}
+
+.spendig-subhead {
+    grid-area: 10 / 2 / 11 / 6;
+}
+
+.spending-date {
+    grid-area: 11 / 2 / 12 / 6;
+    font-size: 0.8em;
+}
+
+.spending-money-left {
+    font-size: 1.2em;
+    grid-area: 10 / 7 / 12 / 12;
+    align-self: center;
+}
+
+/* ДОХОДЫ */
+
 .revenue {
-    grid-column: 4 / 10;
-    grid-row: 5 / 9;
+    grid-area: 5 / 4 / 9 / 10;
     background-color: var(--darkBlue);
     border-radius: 1rem;
     display: flex;
@@ -166,6 +326,7 @@ h2 {
     align-items: center;
 }
 
+/* графики */
 .chart-header {
     width: 96%;
     height: 15%;
@@ -174,8 +335,6 @@ h2 {
     color: white;
 }
 
-/* CHART */
-
 .chart-container {
     position: relative;
     margin: auto;
@@ -183,26 +342,77 @@ h2 {
     width: 96%;
 }
 
-/* ---- */
 
 
 .box-7 {
-    grid-column: 10 / 13;
-    grid-row: 6 / 9;
+    grid-area: 6 / 10 / 9 / 13;
     background-color: var(--darkBlue);
     border-radius: 1rem;
 }
 
-.box-8 {
-    grid-column: 1 / 6;
-    grid-row: 9 / 13;
+.transactions {
+    grid-area: 9 / 1 / 13 / 6;
     background-color: var(--darkBlue);
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.transactions-title {
+    width: 92%;
+    font-size: 1.2em;
+    margin: 4% 0 3%;
+}
+
+.transactions-content {
+    width: 92%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.transactions-action {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+}
+
+.transactions-action:hover {
+    border-radius: 0.7em;
+    padding: 0 2%;
+    background: linear-gradient(45deg, #E065FFAA 20%, var(--blue) 30%, transparent 60%, #E065FFAA);
+    transform: scale(1.02);
+}
+
+.action-date {
+    font-size: 0.7em;
+    width: 50%;
+    text-align: center;
+}
+
+
+.transaction-icon {
+    width: 8%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--nightBlue);
+    border-radius: 0.75em;
+}
+
+.transaction-name {
+    width: 20%;
+}
+
 
 .expenses {
-    grid-column: 6 / 10;
-    grid-row: 9 / 13;
+    grid-area: 9 / 6 / 13 / 10;
     background-color: var(--darkBlue);
     border-radius: 1rem;
     padding: 1rem;;
@@ -211,9 +421,9 @@ h2 {
     align-items: center;
 }
 
-.box-10 {
-    grid-column: 10 / 13;
-    grid-row: 9 / 13;
+/* ЦЕЛИ */
+.goals {
+    grid-area: 9 / 10 / 13 / 13;
     background-color: var(--darkBlue);
     border-radius: 1rem;
 }

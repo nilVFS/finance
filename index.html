@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,46 +13,221 @@
     <script src="resources/scripts/revenueChart.js" defer></script>
     <script src="resources/scripts/expenses.js" defer></script>
 </head>
+
 <body>
+
     <aside>
 
     </aside>
 
     <main>
         <div id="content">
+
             <div class="header">
                 <h2>Dashboard</h2>
             </div>
+
+
             <div class="balance value">
                 <h3 class="value-header">Баланс</h3>
                 <h3 class="cash">₽121 354.50</h3>
-                <p class="val-desc">25 июля, 15:32</p>
+                <p class="val-desc gradient-font">25 июля, 15:32</p>
                 <hr class="val-hr">
-                <p class="cash-diff">+19416,72 ₽</p>
-                <svg xmlns="http://www.w3.org/2000/svg" class="stocks-icon">
+                <p class="cash-diff">+19416.72 ₽</p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="stocks-icon-up">
                     <path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/>
                 </svg>
-                <p class="val-diff">16%</p>
+                <p class="val-diff">16.00%</p>
             </div>
-            <div class="saved value"></div>
-            <div class="bills value"></div>
-            <div class="box-4"></div>
-            <div class="box-5"></div>
+
+
+            <div class="saved value">
+                <h3 class="value-header">Сэкономлено</h3>
+                <h3 class="cash">₽141 272.35</h3>
+                <p class="val-desc gradient-font">25 июля, 10:25</p>
+                <hr class="val-hr">
+                <p class="cash-diff">–8066.65 ₽ (чем год назад)</p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="stocks-icon-down">
+                    <path d="M32.65 36v-3H39L26.95 20.95 18.6 29.3 4 14.75l2.15-2.15L18.55 25l8.35-8.35L41.05 30.8v-6.15H44V36Z"/>
+                </svg>
+                <p class="val-diff">5.71%</p>
+            </div>
+
+
+            <div class="loan value">
+                <h3 class="value-header">Кредит</h3>
+                <h3 class="cash">₽57 830.00</h3>
+                <p class="val-desc gradient-font">25 июля, 14:12</p>
+                <hr class="val-hr">
+                <p class="cash-diff">-6361.30 ₽</p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="stocks-icon-up">
+                    <path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/>
+                </svg>
+                <p class="val-diff">10.00%</p>
+            </div>
+
+
+            <div class="account">
+                <div class="account-wrapper">
+                    <div class="profile-image">
+                        <img src="resources/images/profile-image.png" alt="profile image">
+                    </div>
+                    <h3 class="profile-username">Владислав Низьев</h3>
+                    <p class="profile-greeting blue">Привет, Влад!</p>
+                    <p class="profile-date">Понедельник, 25 Июля 2022</p>
+                </div>
+            </div>
+
+
+            <div class="spending-plan">
+
+                <h3 class="spending-header">Месячный план расходов</h3>
+                <p class="spending-left">21% осталось</p>
+                <p class="spending-days-left">6 дней осталось</p>
+                <hr class="spending-hr" />
+                <p class="spendig-subhead">Ваш остаток</p>
+                <p class="spending-date gradient-font">25 июля, 17:32</p>
+                <p class="spending-money-left"><span class="pink">32500</span>/42700₽</p>
+                <div class="progress-circle">
+                    <span class="number">79%</span>
+                    <svg height="100" width="100" class="circle">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                              <stop offset="0%" style="stop-color: #7665FF; stop-opacity: 1" />
+                              <stop offset="100%" style="stop-color: #E065FF; stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="35" stroke="url(#grad1)"
+                            stroke-width="10" stroke-opacity="1" fill="none">
+                        </circle>
+                    </svg>
+                    <svg height="100" width="100" class="bg-circle">
+                        <circle id="bg-circle" cx="50" cy="50" r="35" "
+                            stroke-width="10" stroke-opacity="0.2" fill="none"></circle>
+                    </svg>
+                </div>
+            </div>
+
+
             <div class="revenue">
                 <h3 class="chart-header">Доходы</h3>
                 <div class="chart-container">
                     <canvas id="revenue"></canvas>
                 </div>
             </div>
+
+
             <div class="box-7"></div>
-            <div class="box-8"></div>
+
+
+            <div class="transactions">
+                <h3 class="transactions-title">
+                    Транзакции
+                </h3>
+                <div class="transactions-content">
+                    <div class="transactions-action">
+                        <div class="transaction-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" class="gradient-svg" style="fill: url(#MyGradient)">
+                                  <defs>
+                                    <linearGradient id="MyGradient">
+                                      <stop offset="5%" stop-color="#7665FF" />
+                                      <stop offset="95%" stop-color="#E065FF" />
+                                    </linearGradient>
+                                  </defs>
+                                <path d="M5.9 22.325q-1.1 0-1.875-.775-.775-.775-.775-1.875v-12.2q0-1.1.775-1.875.775-.775
+                                    1.875-.775h1.775q0-1.75 1.275-2.95 1.275-1.2 3.05-1.2t3.05 1.2q1.275 1.2 1.275 2.95H18.1q1.1
+                                    0 1.875.775.775.775.775 1.875v12.2q0 1.1-.775 1.875-.775.775-1.875.775Zm0-2.65h12.2v-12.2h-1.775V9.15q0
+                                    .55-.387.937-.388.388-.938.388-.55 0-.938-.388-.387-.387-.387-.937V7.475h-3.35V9.15q0
+                                    .55-.387.937-.388.388-.938.388-.55 0-.938-.388-.387-.387-.387-.937V7
+                                    .475H5.9v12.2Zm4.425-14.85h3.35q0-.65-.5-1.075-.5-.425-1.175-.425t-1.175.425q-.5.425-.5
+                                    1.075ZM5.9 19.675v-12.2 12.2Z"/>
+                            </svg>
+                        </div>
+                        <h4 class="transaction-name">
+                            Продукты
+                        </h4>
+                        <p class="gradient-font action-date">
+                            24 ИЮЛЯ 2022г, 19:20
+                        </p>
+                        <p class="action-val">
+                            - 1200.00₽
+                        </p>
+                    </div>
+
+                    <div class="transactions-action">
+                        <div class="transaction-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" class="gradient-svg" style="fill: url(#MyGradient)">
+                                <path d="M17.15 22.6v-8.15h-3.4V7q0-2.375 1.8-3.975T19.8 1.55V22.6Zm-10.65 0v-9.4q-1.4-.45-2.3-1.625Q3.3
+                                 10.4 3.3 8.9V1.6h2.65v7.3h.55V1.6h2.65v7.3h.55V1.6h2.65v7.3q0 1.5-.9 2.675-.9 1.175-2.3 1.625v9.4Z"/>
+                          </svg>
+                        </div>
+                        <h4 class="transaction-name">
+                            Рестораны
+                        </h4>
+                        <p class="gradient-font action-date">
+                            25 ИЮЛЯ 2022г, 15:47
+                        </p>
+                        <p class="action-val">
+                            - 1200.00₽
+                        </p>
+                    </div>
+
+                    <div class="transactions-action">
+                        <div class="transaction-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" class="gradient-svg" style="fill: url(#MyGradient)">
+                                <path d="M5.5 13.6q.675-.3 1.425-.45Q7.675 13 8.4 13V6.9L5.025 8.75 4.4 7.7l4-2.3q.55.95 1.513 1.475.962.525
+                                 2.087.525 1.125 0 2.163-.513 1.037-.512 1.562-1.412l3.85 2.225-.6 1.05L15.6 6.9v9.65q.325
+                                  0 .625-.137.3-.138.675-.463l1.6-1.4v-2.725l1.575.85 3.45-6.025L16.4 2.5H14q0 .825-.587 1.412Q12.825 4.5 12
+                                   4.5q-.825 0-1.412-.588Q10 3.325 10 2.5H7.6L.45 6.625l3.475 6.05 1.575-.85Zm-.9 6.875-1.875-2.2 2.5-2.15q.65-.575
+                                    1.475-.85Q7.525 15 8.375 15q.85 0 1.663.275.812.275 1.462.85l2.9 2.475q.25.2.575.313.325.112.675.112.35 0
+                                     .662-.112.313-.113.563-.313l2.525-2.175 1.875 2.25-2.5 2.15q-.65.575-1.463.838-.812.262-1.662.262-.85
+                                      0-1.675-.262-.825-.263-1.475-.838L9.6 18.35q-.25-.2-.563-.312-.312-.113-.662-.113-.35 0-.675.113-.325.112-.575
+                                      .312ZM12 7.4Z"/>
+                          </svg>
+                        </div>
+                        <h4 class="transaction-name">
+                            Одежда
+                        </h4>
+                        <p class="gradient-font action-date">
+                            24 ИЮЛЯ 2022г, 12:50
+                        </p>
+                        <p class="action-val">
+                            - 1200.00₽
+                        </p>
+                    </div>
+
+                    <div class="transactions-action">
+                        <div class="transaction-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" class="gradient-svg" style="fill: url(#MyGradient)">
+                                <path d="M10.325 18.125h3.35v-2.9h2.9v-3.35h-2.9v-2.9h-3.35v2.9h-2.9v3.35h2.9ZM6.9 
+                                21.8q-1.125 0-1.887-.762-.763-.763-.763-1.888V7.95q0-1.125.763-1.888Q5.775 5.3 6.9 5.3h10.2q1.125 
+                                0 1.888.762.762.763.762 1.888v11.2q0 1.125-.762 1.888-.763.762-1.888.762Zm0-2.65h10.2V7.95H6.9v11.2ZM5.6 
+                                4.75V2.1h12.85v2.65Zm1.3 3.2v11.2-11.2Z"/>
+                          </svg>
+                        </div>
+                        <h4 class="transaction-name">
+                            Медицина
+                        </h4>
+                        <p class="gradient-font action-date">
+                            24 ИЮЛЯ 2022г, 22:00
+                        </p>
+                        <p class="action-val">
+                            - 1200.00₽
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+
             <div class="expenses">
               <h3 class="chart-header">Расходы</h3>
-              <div class="chart-container">
-                <canvas id="expenses"></canvas>
+                <div class="chart-container">
+                    <canvas id="expenses"></canvas>
+                </div>
             </div>
-            </div>
-            <div class="box-10"></div>
+
+
+            <div class="goals"></div>
         </div>
     </main>
 </body>

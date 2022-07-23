@@ -1,6 +1,5 @@
-
 var data = {
-    labels: ["Авг", "Сент", "Окт", "Ноя", "Дек", "Янв", "Фев"],
+    labels: ["Янв", "Фев", "Март", "Апр", "Май", "Июнь", "Июль"],
     datasets: [{
     label: "Доходы",
     backgroundColor: "rgba(118, 101, 255, 0.2)",
@@ -8,9 +7,9 @@ var data = {
     borderWidth: 2,
     hoverBackgroundColor: "rgba(118, 101, 255,0.4)",
     hoverBorderColor: "rgba(224, 101, 255, 1)",
-    data: [32500, 41762, 38762, 43782, 41882, 36772, 39835],
+    data: [32500, 41762, 38762, 43782, 41882, 36772, 42700],
     fill: "start",
-    pointStyle: "rectRounded",
+    pointRadius: 5,
     }]
 };
 
@@ -18,6 +17,8 @@ var options = {
     maintainAspectRatio: false,
     scales: {
         y: {
+            min: 0,
+            max: 50000,
             stacked: true,
             grid: {
             display: true,

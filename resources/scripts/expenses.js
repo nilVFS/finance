@@ -9,6 +9,7 @@ var data = {
     hoverBorderColor: "rgba(224, 101, 255, 1)",
     data: [3000, 4000, 6200, 4700, 3450, 6000, 5600],
     borderRadius: 15,
+    barThickness: 15,
     }]
 };
 
