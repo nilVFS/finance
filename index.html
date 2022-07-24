@@ -28,7 +28,7 @@
             </div>
 
 
-            <div class="balance value">
+            <div class=" block balance value">
                 <h3 class="value-header">Баланс</h3>
                 <h3 class="cash">₽121 354.50</h3>
                 <p class="val-desc gradient-font">25 июля, 15:32</p>
@@ -41,7 +41,7 @@
             </div>
 
 
-            <div class="saved value">
+            <div class="block saved value">
                 <h3 class="value-header">Сэкономлено</h3>
                 <h3 class="cash">₽141 272.35</h3>
                 <p class="val-desc gradient-font">25 июля, 10:25</p>
@@ -54,7 +54,7 @@
             </div>
 
 
-            <div class="loan value">
+            <div class="block loan value">
                 <h3 class="value-header">Кредит</h3>
                 <h3 class="cash">₽57 830.00</h3>
                 <p class="val-desc gradient-font">25 июля, 14:12</p>
@@ -67,7 +67,7 @@
             </div>
 
 
-            <div class="account">
+            <div class="block account">
                 <div class="account-wrapper">
                     <div class="profile-image">
                         <img src="resources/images/profile-image.png" alt="profile image">
@@ -79,7 +79,7 @@
             </div>
 
 
-            <div class="spending-plan">
+            <div class="block spending-plan">
 
                 <h3 class="spending-header">Месячный план расходов</h3>
                 <p class="spending-left">21% осталось</p>
@@ -87,7 +87,7 @@
                 <hr class="spending-hr" />
                 <p class="spendig-subhead">Ваш остаток</p>
                 <p class="spending-date gradient-font">25 июля, 17:32</p>
-                <p class="spending-money-left"><span class="pink">32500</span>/42700₽</p>
+                <p class="spending-money-left"><span class="pink">33733</span>/42700₽</p>
                 <div class="progress-circle">
                     <span class="number">79%</span>
                     <svg height="100" width="100" class="circle">
@@ -109,7 +109,7 @@
             </div>
 
 
-            <div class="revenue">
+            <div class="block revenue">
                 <h3 class="chart-header">Доходы</h3>
                 <div class="chart-container">
                     <canvas id="revenue"></canvas>
@@ -117,10 +117,10 @@
             </div>
 
 
-            <div class="box-7"></div>
+            <div class="block box-7"></div>
 
 
-            <div class="transactions">
+            <div class="block transactions">
                 <h3 class="transactions-title">
                     Транзакции
                 </h3>
@@ -150,7 +150,7 @@
                             24 ИЮЛЯ 2022г, 19:20
                         </p>
                         <p class="action-val">
-                            - 1200.00₽
+                            - 2153.50₽
                         </p>
                     </div>
 
@@ -168,7 +168,7 @@
                             25 ИЮЛЯ 2022г, 15:47
                         </p>
                         <p class="action-val">
-                            - 1200.00₽
+                            - 1730.00₽
                         </p>
                     </div>
 
@@ -192,7 +192,7 @@
                             24 ИЮЛЯ 2022г, 12:50
                         </p>
                         <p class="action-val">
-                            - 1200.00₽
+                            - 4700.00₽
                         </p>
                     </div>
 
@@ -212,14 +212,14 @@
                             24 ИЮЛЯ 2022г, 22:00
                         </p>
                         <p class="action-val">
-                            - 1200.00₽
+                            - 1375.68₽
                         </p>
                     </div>
                 </div>
             </div>
             
 
-            <div class="expenses">
+            <div class="block expenses">
               <h3 class="chart-header">Расходы</h3>
                 <div class="chart-container">
                     <canvas id="expenses"></canvas>
@@ -227,7 +227,71 @@
             </div>
 
 
-            <div class="goals"></div>
+            <div class="block goals">
+                <h3 class="goals-title">
+                    Цели
+                </h3>
+                <div class="goals-content">
+                    <div class="goals-action">
+                        <div class="goal-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" class="gradient-svg svg-plane" style="fill: url(#MyGradient)">
+                                <path d="M8.1 22.55V20.5l2.05-1.55V13.9l-8.7 2.55v-2.6l8.7-5.1V3.3q0-.8.525-1.325Q11.2 
+                                1.45 12 1.45q.8 0 1.325.525.525.525.525 1.325v5.45l8.7 5.1v2.6l-8.7-2.55v5.05l2.05 
+                                1.55v2.05l-3.9-1.1Z"/>
+                            </svg>
+                        </div>
+                        <div class="goal-desc">
+                            <div class="goal-content">
+                                <h4 class="goal-name">Отдых</h4>
+                                <p><span class="pink">20000</span>/40000₽</p>
+                            </div>
+                            <div class="goal-prog trip-target"></div>
+                        </div>
+                    </div>
+                    <div class="goals-action">
+                        <div class="goal-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" class="gradient-svg" style="fill: url(#MyGradient)">
+                                <path d="M1.625 22.1q-.55 0-.937-.388Q.3 21.325.3 20.775t.388-.938q.387-.387.937-.387h20.75q.55 
+                                0 .937.387.388.388.388.938 0 .55-.388.937-.387.388-.937.388Zm2.225-3.65q-1.1 0-1.875-.775Q1.2 16.9 
+                                1.2 15.8V4.6q0-1.1.775-1.875.775-.775 1.875-.775h16.3q1.1 0 1.875.775.775.775.775 1.875v11.2q0 1.1-.775 
+                                1.875-.775.775-1.875.775Zm0-2.65h16.3V4.6H3.85v11.2Zm0 0V4.6v11.2Z"/>
+                            </svg>
+                        </div>
+                        <div class="goal-desc">
+                            <div class="goal-content">
+                                <h4 class="goal-name">Компьютер</h4>
+                                <p><span class="pink">45000</span>/75000₽</p>
+                            </div>
+                            <div class="goal-prog pc-target"></div>
+                        </div>
+                    </div>
+                    <div class="goals-action">
+                        <div class="goal-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" class="gradient-svg" style="fill: url(#MyGradient)">
+                                <path d="M12 22.2 4.25 18v-6.825L-.475 8.55 12 1.725 24.5 8.55v9.15h-2.65V10l-2.1 1.175V18Zm0-9.85 
+                                7-3.8-7-3.775L5.025 8.55Zm0 6.825 5.1-2.75V12.55L12 15.375 6.9 12.55v3.875Zm.025-6.825ZM12 15.175Zm0 0Z"/>
+                            </svg>
+                        </div>
+                        <div class="goal-desc">
+                            <div class="goal-content">
+                                <h4 class="goal-name">Курсы</h4>
+                                <p><span class="pink">18300</span>/24000₽</p>
+                            </div>
+                            <div class="goal-prog edu-target"></div>
+                        </div>
+                    </div>
+                    <div class="goals-action">
+                        <div class="goal-total">
+                            <div class="goal-content">
+                                <h4 class="goal-name">Всего</h4>
+                                <p><span class="pink">83300</span>/139000₽</p>
+                            </div>
+                            <div class="goal-prog total-target"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
     </main>
 </body>
