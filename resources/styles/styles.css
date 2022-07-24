@@ -48,6 +48,62 @@ aside {
     width: 17%;
     height: 100%;
     background-color: var(--darkBlue);
+    display: grid;
+    grid-template-rows: 12% 68% 20%;
+}
+
+.logo {
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: left;
+}
+
+.bank-logo {
+    width: 20%;
+    fill: var(--blue);
+    margin-right: 1em;
+}
+
+.bank-name {
+    width: 60%;
+    font-size: 2rem;
+}
+
+nav {
+    width: 100%;
+}
+
+nav > ul {
+    width: 100%;
+}
+
+ul > li {
+    width: 100%;
+    padding: 0.4rem;
+}
+
+nav > ul > li:hover {
+   background: linear-gradient(45deg, var(--blue), var(--pink)) ;
+}
+
+li > a {
+    display: flex;
+    width: 100%;
+    margin: 0.5rem auto;
+    margin-left: 4%;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav-icon {
+    margin-top: -3%;
+    margin-right: 0.6em;
+}
+
+.nav-icon > svg {
+    fill: var(--white);
 }
 
 /* ОСНОВНОЙ БЛОК */
@@ -114,6 +170,8 @@ input[type="text"]::placeholder {
 input[type="text"]:focus {
     grid-column: 4 / 12;
     font-size: 0.9em;
+    box-shadow: 0 0 1em var(--white);
+    transition: box-shadow 0.3s ease;
 }
 
 .сurrency {
