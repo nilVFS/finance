@@ -44,7 +44,7 @@ h1, h2, h3, h4, p {
 
 
 /* БОКОВАЯ НАВИГАЦИЯ */
-aside {
+.navigation-left {
     width: 17%;
     height: 100%;
     background-color: var(--darkBlue);
@@ -126,7 +126,7 @@ main {
 }
 
 .block:hover {
-    box-shadow: 0 0 1em var(--white);
+    box-shadow: 0 0 1em var(--blue);
     transition: box-shadow 0.3s ease;
 }
 
@@ -170,7 +170,7 @@ input[type="text"]::placeholder {
 input[type="text"]:focus {
     grid-column: 4 / 12;
     font-size: 0.9em;
-    box-shadow: 0 0 1em var(--white);
+    box-shadow: 0 0 1em var(--blue);
     transition: box-shadow 0.3s ease;
 }
 
