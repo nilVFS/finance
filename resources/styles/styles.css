@@ -354,8 +354,8 @@ h2 {
 .chart-header {
     width: 96%;
     height: 15%;
+    font-size: 1.2em;
     text-align: start;
-    font-size: 1em;
     color: var(--white);
 }
 
@@ -367,11 +367,51 @@ h2 {
 }
 
 
+/* ПЕРЕВОДЫ */
 
-.box-7 {
+.transfers {
     grid-area: 6 / 10 / 9 / 13;
     background-color: var(--darkBlue);
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.transfers-header {
+    width: 92%;
+    font-size: 1.2em;
+    margin: 4% 0 3%;
+}
+
+.transfers-content {
+    width: 92%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.transfers-action {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.transfers-action p {
+    width: 15%;
+    text-align: start;
+}
+
+.svg-arrow-right {
+    fill: var(--pink);
+}
+
+.svg-arrow-left {
+    transform: rotate(180deg);
+    fill: var(--blue);
 }
 
 /* ТРАНЗАКЦИИ */
