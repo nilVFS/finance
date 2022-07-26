@@ -248,6 +248,9 @@ input[type="text"]:focus {
     grid-row: 8;
     grid-column: 2 / 12;
     width: 100%;
+    border: none;
+    height: 1px;
+    background-color: var(--white);
     opacity: 0.3;
 }
 
@@ -419,7 +422,10 @@ input[type="text"]:focus {
 .spending-hr {
     grid-area:  9 / 2 / 9 / 12;
     width: 100%;
-    opacity: 0.2;
+    border: none;
+    height: 1px;
+    background-color: var(--white);
+    opacity: 0.3;
 }
 
 .spendig-subhead {
